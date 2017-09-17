@@ -67,6 +67,20 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  //number of sigma points
+  int n_sigma_;
+
+  // RADAR measurement noise covariance matrix
+  MatrixXd R_radar_;
+
+  //LIDAR measurement noise covariance matrix
+  MatrixXd R_lidar_;
+
+  // RADAR NIS 
+  double NIS_radar_;
+
+  // LIDAR NIS 
+  double NIS_laser_;
 
   /**
    * Constructor
@@ -102,6 +116,8 @@ public:
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(MeasurementPackage meas_package);
+
+  void UpdateUKF(MeasurementPackage meas_package, MatrixXd Zsig, int n_z);
 };
 
 #endif /* UKF_H */
