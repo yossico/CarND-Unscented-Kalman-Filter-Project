@@ -1,5 +1,5 @@
-#ifndef MEASUREMENT_PACKAGE_H_
-#define MEASUREMENT_PACKAGE_H_
+#ifndef meas_packageAGE_H_
+#define meas_packageAGE_H_
 
 #include "Eigen/Dense"
 
@@ -16,4 +16,4 @@ public:
 
 };
 
-#endif /* MEASUREMENT_PACKAGE_H_ */
+#endif /* meas_packageAGE_H_ */
