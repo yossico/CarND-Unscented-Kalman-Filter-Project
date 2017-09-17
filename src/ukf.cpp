@@ -13,9 +13,9 @@ using std::vector;
 
 void NormalizeAngle(double *ang)
 {
-//	*ang = fmod(*ang, M_PI);
-	while (*ang > M_PI) *ang -= 2. * M_PI;
-	while (*ang < -M_PI) *ang += 2. * M_PI;
+	*ang = fmod(*ang, M_PI);
+/*	while (*ang > M_PI) *ang -= 2. * M_PI;
+	while (*ang < -M_PI) *ang += 2. * M_PI;*/
 }
 /**
  * Initializes Unscented Kalman filter
